@@ -48,6 +48,7 @@
 
 % --- tcolorbox styles: match Paper 1 / Paper 2 / Paper 7 ---------------
 \tcbuselibrary{skins,breakable}
+\usetikzlibrary{positioning,arrows.meta}
 
 \tcbset{
     apfbox/.style={
@@ -189,6 +190,14 @@ This paper is therefore Paper~0 in the sense that the papers numbered 1 through~
 
 Earlier editions also claimed not to derive results and not to prove theorems. That remains true of this paper: the derivations and proofs live in Papers~1 through~7. But an ontology paper is neither a popularization nor a survey. It states what the framework commits to, at the level of precision those commitments need in order to be arguable. Where an earlier edition might have used ``forces,'' ``selects,'' or ``the system must choose,'' this one states a logical locator (an $\argmin$ over an admissible set), names what the admissible set is bounded by (\textbf{A1} above and \textbf{MD} below), and flags what has and has not been proved. The narrative pacing is preserved where it serves the reader; the precision is raised where an earlier pass had taken shortcuts.
 
+\subsection*{What this paper does not claim}
+
+This paper is not a claim that the full content of physics can be read off from ontology alone. It does not claim that quantum theory, gauge structure, thermodynamics, or field content follow immediately from a single slogan. Its aim is narrower: to identify the minimum structural commitments required for physical distinctions to count as meaningful at all, and to state those commitments in a form that later technical work can either earn or fail to earn.
+
+The framework is best understood first as a filter on permissible physical structure, not as a generative machine that produces all later physics from a single premise. Its immediate role is to rule out physically empty distinctions and overextended joint descriptions; only thereafter does the downstream constructive programme begin. The later papers bear the burden of recovering familiar domains; this paper bears only the burden of stating the foundational commitments clearly enough that their success or failure can be tested.
+
+The reader need not grant the full downstream ambition of the programme in order to assess the present paper. The question here is local: whether the proposed foundational constraints are coherent, nontrivial, and physically sharper than their nearest alternatives. If they are, the downstream papers become legitimate targets of technical scrutiny. If they are not, the downstream programme fails at its root, and the later papers cease to be of interest. Either verdict is useful; neither requires the reader to pre-commit to the whole.
+
 \subsection*{How this paper relates to the rest of the series}
 
 The technical papers establish the framework's results. This paper states what the framework commits to in order to make those results meaningful. A short map:
@@ -263,6 +272,10 @@ A distinction is physically meaningful if and only if finite enforcement is comm
 
 \noindent The claim has two directions. The \emph{only if} direction says that any distinction with no cost of maintenance has no physical content: such a distinction cannot be examined, probed, or distinguished from its absence, because the distinction and its erasure are indistinguishable in every observable respect. The \emph{if} direction says that distinctions maintained at finite cost are real in a sense that does not require further grounding: the existence of the cost is what it is for the distinction to be physical.
 
+Any physical theory must distinguish between structures that are merely writable in description and structures that the world can actually sustain. The keystone identifies that boundary. Without such a boundary, physical law would have no principled way to exclude distinctions that are formally specifiable but physically empty, and the framework's separation of the two would collapse into convention.
+
+A further clarification is needed about what ``meaningful'' denotes here. In this framework, meaningful does not mean presently observed, and it does not yet mean realized in a particular history. It means only that a distinction is physically well-formed: the world can in principle sustain it against admissible perturbation at finite enforcement cost. Observation is one mode of realized enforcement, not the definition of meaning. Realization is the further fact that one admissible continuation is physically instantiated rather than merely permitted. These three levels---\emph{meaningful}, \emph{observable}, \emph{realized}---are used throughout the framework as distinct notions, and collapsing them loses the structure the downstream papers depend on.
+
 The keystone is a commitment, not an inference. Nothing in the framework derives it. The framework is built on it. Every result, in every technical paper, has the form: \emph{given the keystone, if the admissibility structure is of such-and-such kind, then the realized configuration is X}. The keystone is the antecedent that the framework does not reach behind.
 
 A reader unfamiliar with the framework may prefer to read the keystone first as an informal stipulation, check that it is not obviously false, and proceed. The rest of this chapter examines it more carefully: its motivation, what it rules out, what it does not claim, and how it positions the framework relative to its alternatives.
@@ -298,6 +311,57 @@ The keystone has sharp negative content. It rules out three kinds of distinction
 \end{description}
 
 \noindent These exclusions are not preferences. They are structural: the framework's downstream results depend on them. Paper~1's quantum-structure theorems and Paper~2's non-closure theorem both use, in load-bearing ways, the fact that distinctions with zero or notional cost are outside the admissibility structure.
+
+\subsection{The keystone is a physical commitment, not a philosophical one}\label{sec:keystone_physical_not_philosophical}
+
+A natural first reaction is that the keystone sounds like a metaphysical posture rather than a physical principle. The framework anticipates this reading and rejects it on narrow grounds.
+
+The keystone begins from a physical, not an interpretive, demand: a distinction counts as physically meaningful only if the world can sustain it against admissible perturbation. If no finite physical commitment separates one alternative from another, then the distinction has no stable physical content, and should not appear in fundamental law. The point is not epistemic modesty. It is ontological parsimony: physics should traffic only in distinctions the world actually sustains.
+
+This is why finiteness enters at the foundational level rather than being deferred to a dynamical sector. If the enforcement required to sustain distinctions were effectively unbounded, admissibility would lose physical bite: arbitrarily fine, jointly incompatible, and globally unconstrained structures could all be admitted without cost, and the difference between physically meaningful and merely formal distinctions would collapse. Finite enforceability is therefore not an optional embellishment. It is what turns ``distinction'' from a logical notion into a physical one.
+
+The same clarification applies to the selection principle that Chapter~\ref{sec:PLEC} introduces. The argmin language in A2 is descriptive, not anthropomorphic. The framework does not claim that nature performs an optimization, computes a global minimum, or chooses among options by an internal algorithm. The argmin formulation is a compact way of characterizing which structures are physically realizable once admissibility constraints are imposed; it locates realized structure, not a hidden sub-physical mechanism. Variational formulations throughout physics work the same way: they identify realized trajectories or states without implying that the world solves a mathematical problem step by step.
+
+A reader might still object that the framework overreaches: how can a principle about enforceable distinction plausibly connect to quantum probabilities, gauge structure, thermodynamic irreversibility, or effective field content? The answer is that this paper does not claim these consequences are immediate from the ontology. Its purpose is more limited. It isolates the foundational commitments, states them in a logically inspectable form, and shows how they constrain the space of possible downstream constructions. The technical papers bear the burden of deriving specific structures and testing whether the framework earns its scope.
+
+The reader should therefore distinguish three levels of claim. First, the ontological claim: physical meaning requires enforceable distinction. Second, the structural claim: once enforceability is finite, not every formally writable distinction can be jointly maintained, and admissibility becomes a necessary organizing principle. Third, the downstream programmatic claims: particular physical domains may instantiate this architecture in ways that recover or constrain familiar structures. The present paper defends only the first two. The third requires separate derivation and is not assumed here. If the ontological and structural claims fail, the downstream program fails with them. If they stand, then the downstream papers become legitimate targets of technical scrutiny rather than speculative extension.
+
+The framework should therefore not be read as an ornamental philosophy placed atop existing physics. It is a claim about what physics must minimally permit for its own distinctions to count as physically real.
+
+The chain of commitments just sketched can be stated explicitly as a sequence of forced steps (Figure~\ref{fig:logic_chain}). The diagram is not a summary in the sense of a simplification; it is the paper's load-bearing sequence in its shortest form. Each step is compelled by the one before it, under the reading that physical meaning requires enforceable distinction. The last step is the transition from the ontological claims that this paper defends to the technical programme that the later papers undertake.
+
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}[
+    node distance=8pt,
+    box/.style={
+        rectangle,
+        rounded corners=2pt,
+        draw=black,
+        line width=0.4pt,
+        align=left,
+        text width=0.78\linewidth,
+        inner sep=7pt,
+        font=\small
+    },
+    arrow/.style={-{Latex[length=4pt,width=3.5pt]}, line width=0.5pt, black!55}
+]
+\node[box] (n1) {\textbf{1.}\quad Physical law requires meaningful distinctions.};
+\node[box, below=of n1] (n2) {\textbf{2.}\quad Meaningful distinctions require enforceable distinction. \emph{(The keystone, \S\ref{sec:keystone_claim}.)}};
+\node[box, below=of n2] (n3) {\textbf{3.}\quad Enforceability is finite. \emph{(Axiom A1, \S\ref{sec:A1}.)}};
+\node[box, below=of n3] (n4) {\textbf{4.}\quad Therefore not all formally definable distinctions are jointly admissible. \emph{(The admissibility structure, \S\ref{sec:admissibility_structure}.)}};
+\node[box, below=of n4] (n5) {\textbf{5.}\quad Realized structure must lie within the admissible set. \emph{(PLEC, \S\ref{sec:PLEC}.)}};
+\node[box, below=of n5] (n6) {\textbf{6.}\quad Later papers ask what known physics this architecture can support. \emph{(Book~II.)}};
+
+\draw[arrow] (n1) -- (n2);
+\draw[arrow] (n2) -- (n3);
+\draw[arrow] (n3) -- (n4);
+\draw[arrow] (n4) -- (n5);
+\draw[arrow] (n5) -- (n6);
+\end{tikzpicture}
+\caption[The paper's logic chain]{\textbf{The paper's logic chain.} Each step is forced by the step above it under the reading that physical meaning requires enforceable distinction. The first five steps are the ontology this paper defends; step~6 marks the handoff to the downstream technical programme.}
+\label{fig:logic_chain}
+\end{figure}
 
 \subsection{The keystone is not a theorem; and that is not a weakness}\label{sec:keystone_not_theorem}
 
@@ -335,6 +399,8 @@ The formal statement encodes two claims: that enforcement cost is a real-valued 
 
 \Aone{} is not a theorem of anything more primitive. It is a structural claim about physics: the universe does not have unbounded resources for maintaining distinctions at any given interface. The claim is compatible with---indeed, supported by---a wide literature on finite information in physics: the Bekenstein--Hawking area bound~\cite{Bekenstein1981}, Landauer's principle~\cite{Landauer1961}, Ashby's Law of Requisite Variety~\cite{Ashby1956}. These results establish, in different settings, that finite physical systems support only finitely many distinctions. \Aone{} elevates the pattern to an ontological commitment.
 
+Finiteness, in this setting, is not an auxiliary assumption layered atop the keystone. If enforceability were effectively unbounded, admissibility would become vacuous: any formally definable distinction could in principle be preserved jointly with arbitrarily many others, and the framework would lose the power to separate physically meaningful structure from unconstrained description. \Aone{} is what makes the keystone physically substantive. Removing finiteness does not leave a weaker version of the framework; it dissolves the framework altogether, because admissibility loses its bite.
+
 \subsection{What A1 does}\label{sec:A1_does}
 
 \Aone{} fixes the admissible set \emph{from above}. Without \Aone{}, the admissible set would be all configurations whose distinctions have positive finite cost; with \Aone{}, the admissible set is restricted to those whose total cost fits within the interface's capacity.
@@ -354,6 +420,8 @@ Second, \Aone{} does not select a realized configuration from the admissible set
 Third, \Aone{} does not impose variation in cost across distinctions. A world in which every distinction cost the same positive amount would satisfy \Aone{} (and \textbf{MD}), but the $\argmin$ would be uninformative: every admissible configuration with the same number of distinctions would tie. The framework therefore needs \textbf{BW}, the non-degeneracy condition, to ensure the cost spectrum is rich enough for the $\argmin$ to pick out a configuration.
 
 Fourth, \Aone{} does not commit the framework to a specific value or scaling of capacity. The capacity $C(\rho, \Gamma)$ is interface-dependent; the framework's derivations use its existence and finiteness, not its specific value. The Bekenstein--Hawking area law is a physical instance of the capacity structure, but the keystone and \Aone{} do not \emph{presuppose} the area law; the area law is derived in Paper~3 from the admissibility structure.
+
+Fifth, ``finite'' here does not mean negligible, perturbative, or uniformly small. It means only non-unbounded: distinctions must be sustained by physically commit-able structure, and therefore not every formally definable distinction can be jointly maintained without limit. A world with a very large but bounded capacity $C$ satisfies \Aone{} exactly as well as a world with a small capacity; what \Aone{} forbids is unbounded capacity, not large capacity. Readers who hear ``finite enforcement'' and infer ``small, local, perturbative'' should recalibrate: the framework does not assert that reality is weak, only that it is not unconstrained.
 
 \subsection{The countermodel that separates A1 from MD}\label{sec:A1_countermodel}
 
@@ -541,7 +609,7 @@ The lay statement is the frozen sentence the framework uses to name its content 
 
 \subsection{The argmin is a locator, not a process}\label{sec:argmin_locator}
 
-The single most common misreading of \PLEC{} is to treat the $\argmin$ as the output of an optimization \emph{process}. On this misreading, the framework describes a world in which something---nature, the universe, physical reality---is computing a minimum at each moment and delivering the result. That misreading imports an unstated dynamical and agential structure that the framework does not commit to.
+The single most common misreading of \PLEC{} is to treat the $\argmin$ as the output of an optimization \emph{process}. On this misreading, the framework describes a world in which something---nature, the universe, physical reality---is computing a minimum at each moment and delivering the result. That misreading imports an unstated dynamical and agential structure that the framework does not commit to. The term ``selection'' should not be read psychologically, computationally, or teleologically. It names a structural fact: among candidate continuations, only those compatible with finite enforceability belong to the physically realizable set. The extremal formulation is a compact representation of that admissible realized set, not a claim that nature executes an optimization routine.
 
 The framework's ontological commitment is the opposite. The $\argmin$ is a \emph{locator}: it identifies where, inside the admissible set, the realized configuration sits. There is no optimizer, no search, no selection mechanism, no enforcer. The minimum is the referent of ``reality,'' not the output of a procedure that produces reality.
 
@@ -615,6 +683,8 @@ This is a strict minimalism. The framework does not claim that reality ``compute
 There is a second, equally important reason for the discipline. The downstream uniqueness theorems of Papers~1 and~2 are consumed incorrectly if they are read as selection processes. When Paper~2 proves ``the gauge template $SU(3)\times SU(2)\times U(1)$ is uniquely admissible,'' the claim is that this template is the single member of the admissible set under the framework's structural conditions; no other template is admitted. It is \emph{not} the claim that the framework ``chose'' the Standard Model's gauge group out of some pool of alternatives. The latter reading invites ``why this and not that?''-type objections that apply to selection processes; the former reading invites the different (and framework-friendly) question ``is the admissible set correctly specified?''
 
 The descriptive reading therefore is not stylistic. It is substantive: it determines what the framework commits to and what attacks it is vulnerable to. A reader trained in the descriptive reading can engage with the framework on its actual content. A reader who narrates the framework's results as a selection process will critique a framework the framework does not claim to be.
+
+A related misreading, worth naming explicitly, is to treat the framework as a dressed-up operationalism in the narrow epistemic sense. The present view is not reducible to that. It does not define reality by what an observer happens to measure. It defines physical meaning by what the world can sustain as a distinction, whether or not any particular observer is present. Observation is one mode of realized enforcement, not the definition of meaning. The emphasis is ontological before it is epistemic: the framework commits to what the world supports, and only secondarily to how that support is detected.
 
 \subsection{How this paper uses language}\label{sec:descriptive_language}
 

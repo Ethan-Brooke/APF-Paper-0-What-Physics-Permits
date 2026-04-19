@@ -9,7 +9,7 @@ This file tracks the version history of Paper 0 (What Physics Permits: An Ontolo
 - **Version in this repo:** v3.0
 - **File in this repo:** `Paper_0_What_Physics_Permits_v3.0.tex` + `.pdf`
 - **Page count:** 56 pp
-- **Release date:** 2026-04-18
+- **Release date:** 2026-04-19
 - **Codebase version at build:** v6.9 (2026-04-18)
 
 ## Zenodo record

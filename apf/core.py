@@ -972,20 +972,6 @@ def _jarlskog(V):
     """Jarlskog invariant Im(V_us V_cb V_ub* V_cs*)."""
     return (V[0][1] * V[1][2] * V[0][2].conjugate() * V[1][1].conjugate()).imag
 
-def _diag_left(M):
-    """Left-eigenvectors of M sorted by eigenvalue of M M†."""
-    Md = _dag(M)
-    MMd = _mm(M, Md)
-    return _eigh(MMd)
-
-def _extract_angles(U):
-    """PDG mixing angles from 3x3 unitary matrix."""
-    s13 = abs(U[0][2])
-    c13 = _math.sqrt(max(0, 1 - s13 ** 2))
-    s12 = abs(U[0][1]) / c13 if c13 > 1e-15 else 0.0
-    s23 = abs(U[1][2]) / c13 if c13 > 1e-15 else 0.0
-    return {'theta12': _math.degrees(_math.asin(min(1.0, s12))), 'theta23': _math.degrees(_math.asin(min(1.0, s23))), 'theta13': _math.degrees(_math.asin(min(1.0, s13)))}
-
 def _build_two_channel(q_B, q_H, phi, k_B, k_H, c_B, c_H, x=0.5):
     """Build 3x3 mass matrix with bookkeeper + Higgs capacity channels.
 
@@ -1003,6 +989,20 @@ def _build_two_channel(q_B, q_H, phi, k_B, k_H, c_B, c_H, x=0.5):
             hg = c_H * x ** (q_H[g] + q_H[h]) * complex(_math.cos(ang_h), _math.sin(ang_h))
             M[g][h] = bk + hg
     return M
+
+def _extract_angles(U):
+    """PDG mixing angles from 3x3 unitary matrix."""
+    s13 = abs(U[0][2])
+    c13 = _math.sqrt(max(0, 1 - s13 ** 2))
+    s12 = abs(U[0][1]) / c13 if c13 > 1e-15 else 0.0
+    s23 = abs(U[1][2]) / c13 if c13 > 1e-15 else 0.0
+    return {'theta12': _math.degrees(_math.asin(min(1.0, s12))), 'theta23': _math.degrees(_math.asin(min(1.0, s23))), 'theta13': _math.degrees(_math.asin(min(1.0, s13)))}
+
+def _diag_left(M):
+    """Left-eigenvectors of M sorted by eigenvalue of M M†."""
+    Md = _dag(M)
+    MMd = _mm(M, Md)
+    return _eigh(MMd)
 
 
 # ======================================================================
