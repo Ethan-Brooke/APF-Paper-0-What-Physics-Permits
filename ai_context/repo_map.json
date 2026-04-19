@@ -1,6 +1,6 @@
 {
   "schema": "apf.repo_map.v1",
-  "generated_at": "2026-04-19T15:41:03.756884+00:00",
+  "generated_at": "2026-04-19T16:29:04.005628+00:00",
   "paper": {
     "number": 0,
     "title": "What Physics Permits: An Ontology for Admissibility Physics",
@@ -70,7 +70,7 @@
     {
       "number": 5,
       "title": "Quantum Structure from Finite Enforceability",
-      "current_version": "v1.0",
+      "current_version": "v2.0-PLEC",
       "zenodo_doi": "10.5281/zenodo.18604861",
       "zenodo_url": "https://doi.org/10.5281/zenodo.18604861",
       "github_slug": "APF-Paper-5-Quantum-Structure-Hilbert-Born",
@@ -81,7 +81,7 @@
     {
       "number": 6,
       "title": "Dynamics and Geometry as Optimal Admissible Reallocation",
-      "current_version": "v1.0",
+      "current_version": "v2.0-PLEC",
       "zenodo_doi": "10.5281/zenodo.18604874",
       "zenodo_url": "https://doi.org/10.5281/zenodo.18604874",
       "github_slug": "APF-Paper-6-Dynamics-Geometry-Spacetime-Gravity",

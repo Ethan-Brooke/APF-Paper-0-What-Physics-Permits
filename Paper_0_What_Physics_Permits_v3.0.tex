@@ -554,6 +554,27 @@ Paper~1's Technical Supplement~\S1 proves this by exhibiting, for each component
 
 \noindent Each countermodel shows that removing any single component collapses a different part of the framework. The four-component structure is not expositional redundancy; it is the minimal vocabulary in which the framework's commitments can be stated.
 
+Table~\ref{tab:plec_decomposition} summarizes the decomposition in compact form. It is the reference the reader should consult whenever the question arises ``what does A1 alone give you, and what does each additional component add?'' The entry for \textbf{A1} alone is short because A1 alone is short: a finite admissible set, no further predictive content. The downstream structure emerges only when \textbf{MD}, \textbf{A2}, and \textbf{BW} are added in turn. Treating the framework as a single-axiom derivation from A1 is therefore a misreading; the essentiality proofs in Paper~1's Technical Supplement~\S1, and the non-merge discipline of Chapter~4~\S\ref{sec:non_merge}, are there precisely to prevent it.
+
+\begin{table}[ht]
+\centering
+\small
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.09\linewidth} >{\raggedright\arraybackslash}p{0.27\linewidth} >{\raggedright\arraybackslash}p{0.29\linewidth} >{\raggedright\arraybackslash}p{0.26\linewidth}@{}}
+\toprule
+\textbf{Component} & \textbf{What it adds to the admissible set} & \textbf{If this component is removed (countermodel)} & \textbf{Downstream role} \\
+\midrule
+\textbf{A1} alone & Total enforcement cost across maintained distinctions is bounded above by the interface capacity $C(\rho,\Gamma)$. & (A1 is the keystone's structural companion; removing it dissolves the framework, not a theorem inside it.) & Establishes finite capacity. Not yet predictive: any finite-cost configuration is admitted. \\
+\textbf{+ MD} & Positive cost floor $\inf_d \varepsilon(d) \geq \mu^* > 0$: zero-cost and arbitrarily-close-to-zero distinctions are excluded. & $\varepsilon(d_n) = 2^{-n}$. \textbf{A1} holds ($C = 1$), but the admissible set is contaminated by distinctions approaching zero cost (\S\ref{sec:A1_countermodel}). & Makes admissibility non-trivial; distinctions are physically meaningful rather than formal. \\
+\textbf{+ A2} & $\argmin$ over $\mathcal{A}(\rho,\Gamma)$ identifies the realized configuration within the admissible set. & \textbf{A1}, \textbf{MD}, \textbf{BW} all hold; admissible set is well-specified. But realization is located somewhere other than the argmin (uniform at random, maximal cost, etc.). A coherent world, but not \emph{this} framework. & Selects realized structure. The $\argmin$ is a locator, not a process (\S\ref{sec:argmin_locator}). \\
+\textbf{+ BW} & Cost spectrum is non-degenerate: distinct configurations carry distinct total costs. & $\varepsilon(d) = \mu^*$ for all $d$. \textbf{A1}, \textbf{MD}, \textbf{A2} all hold in degenerate form, but the $\argmin$ ties across all admissible configurations and becomes uninformative. & Makes the $\argmin$ structurally informative rather than trivially degenerate. \\
+\bottomrule
+\end{tabular}
+\caption[PLEC component decomposition]{\textbf{PLEC component decomposition: what each component adds and what removing it breaks.} The four components are pairwise logically independent (Paper~1 Technical Supplement, \S1); each is defended by its own countermodel; collapsing one into another is forbidden by the non-merge discipline (\S\ref{sec:non_merge}). The common external misreading---that APF derives the Standard Model ``from A1 alone''---is specifically what this table refutes. A1 alone gives a finite admissible set and nothing more. The predictive content of the framework arises only after \textbf{MD}, \textbf{A2}, and \textbf{BW} are added, each supplying a structurally necessary piece that the others cannot provide.}
+\label{tab:plec_decomposition}
+\end{table}
+
 Chapter~4 now turns to \textbf{A2} itself and the \emph{Principle of Least Enforcement Cost} that unifies all four components.
 
 \clearpage

@@ -968,6 +968,12 @@ def check_T_CKM():
     check(J > 0, 'Jarlskog must be positive')
     return _result(name='T_CKM: Zero-Parameter CKM Prediction', tier=3, epistemic='P', summary=f"Zero free params -> 6/6 CKM magnitudes within 5%. theta_12={a['theta12']:.2f} (exp 13.04, +3.5%). theta_23={a['theta23']:.2f} (exp 2.38, -2.6%). theta_13={a['theta13']:.3f} (exp 0.201, +3.9%). |Vus|={Vus:.4f} |Vcb|={Vcb:.4f} |Vub|={Vub:.5f}. J={J:.2e} (exp 3.08e-5, +8.1%). v4.3.6: upgraded from [Ps] -- all bridge dependencies now [P]. SM: 4 free params -> 4 observables. APF: 0 -> 6+.", key_result='CKM 6/6 within 5%, zero free parameters [P]', dependencies=['T27c', 'T_capacity_ladder', 'T_q_Higgs', 'L_holonomy_phase', 'L_adjoint_sep', 'L_channel_crossing', 'L_rank2_texture'], cross_refs=['L_CP_channel', 'L_NLO_texture'])
 
+def _diag_left(M):
+    """Left-eigenvectors of M sorted by eigenvalue of M M†."""
+    Md = _dag(M)
+    MMd = _mm(M, Md)
+    return _eigh(MMd)
+
 def _jarlskog(V):
     """Jarlskog invariant Im(V_us V_cb V_ub* V_cs*)."""
     return (V[0][1] * V[1][2] * V[0][2].conjugate() * V[1][1].conjugate()).imag
@@ -997,12 +1003,6 @@ def _extract_angles(U):
     s12 = abs(U[0][1]) / c13 if c13 > 1e-15 else 0.0
     s23 = abs(U[1][2]) / c13 if c13 > 1e-15 else 0.0
     return {'theta12': _math.degrees(_math.asin(min(1.0, s12))), 'theta23': _math.degrees(_math.asin(min(1.0, s23))), 'theta13': _math.degrees(_math.asin(min(1.0, s13)))}
-
-def _diag_left(M):
-    """Left-eigenvectors of M sorted by eigenvalue of M M†."""
-    Md = _dag(M)
-    MMd = _mm(M, Md)
-    return _eigh(MMd)
 
 
 # ======================================================================
