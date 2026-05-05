@@ -2,6 +2,8 @@
 
 These prompts are known to produce useful AI work on APF material. Use them as starting points; adapt to your question.
 
+> **Language convention reminder.** APF uses operational vocabulary as descriptive convention; the framework's foundational commitment is structural (admissibility space as a static algebraic object). Time is derived, not primitive. See `LANGUAGE_CONVENTION.md` for the operational/structural translation rule. Apply when writing prose; do not invent temporal premises in proof reconstructions.
+
 Grouped by intent:
 
 ---

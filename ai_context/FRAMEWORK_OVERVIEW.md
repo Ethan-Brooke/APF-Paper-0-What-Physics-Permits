@@ -2,6 +2,8 @@
 
 This file is the framework-wide context that one paper's companion repo cannot supply on its own. Read after `AGENTS.md`.
 
+> **Language convention.** Admissibility Physics is a structural framework: admissibility space is a static algebraic object, and the operational vocabulary used throughout the corpus ("evolves," "enforces," "selects," "saturates," "records") is the local reading of that structure under a temporal slicing. Time itself is derived — Paper 3 derives the arrow of time, Paper 6 derives the metric and dimensionality of spacetime. See `LANGUAGE_CONVENTION.md` for the operational/structural translation rule and the per-paper anchors. Apply silently throughout AI-generated prose.
+
 ---
 
 ## The axiom
